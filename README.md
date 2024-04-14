@@ -2,17 +2,17 @@
 
 This project consists of a backend(node.js Express) and a frontend part.
 
-### Prerequisites
+# Prerequisites
 
 - Node.js
 - npm
 
-## How To start
+# How To start
 Follow these instructions to see the working of project
 
 1. download the code.(git clone ('The repository link'))
 
-### backend setup
+# Backend setup
 
 1. navigate to the backend
 
@@ -30,7 +30,7 @@ Follow these instructions to see the working of project
 5. start the server
    To start the server run (>npm run dev)
 
-### frontend setup
+# Frontend setup
 
 1. navigate to the Client folder
    (>cd ..)  ---> coming back to root directory
