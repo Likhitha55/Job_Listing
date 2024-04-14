@@ -95,20 +95,6 @@ function Dashboard() {
   return (
 
     <div className='grid-container'>
-      {/* <div className='header'>
-        <div className='menu-icon'>
-
-        </div>
-        <div className='header-left'>
-
-          <a href='#'>Homepage</a>
-        </div>
-        <div className='header-right ms-auto me-3'>
-          <a className='logout'>Logout</a>
-        </div>
-
-
-      </div> */}
       <aside id="sidebar">
         <div className='sidebar-header'>
           <div className='side-header-wish'>

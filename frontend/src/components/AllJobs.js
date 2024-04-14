@@ -15,9 +15,6 @@ function AllJobs() {
   useEffect(() => {
     async function fetchJobs() {
       try {
-        // const response = await axios.get('/api/jobs');
-        // setJobs(response.data);
-
         const response = await axios({
           method:"get",
           baseURL: "http://localhost:8080/api",
@@ -43,8 +40,6 @@ function AllJobs() {
 
   const handleDelete = async (jobId) => {
     setJobId(jobId);
-    // console.log(jobId);
-    // console.log("in hndle delete")
     try {
       await axios.delete("http://localhost:8080/api/jobs/delete/" + jobId);
       setJobs(jobs.filter(job => job._id !== jobId));

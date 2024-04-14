@@ -17,7 +17,6 @@ const Modal = ({ job, closeModal }) => {
           </div>
           <h4 className='fw-normal ms-3 mt-2'>Description</h4>
           <div className='description ms-3 mt-2 me-1 pe-5'>{job.description}</div>
-          {/* Add any other job details you want to display */}
           <button className='apply rounded-5 m-auto'>Apply Now</button>
         </div>
       </div>
@@ -26,20 +25,3 @@ const Modal = ({ job, closeModal }) => {
 };
 
 export default Modal;
-
-// import React from 'react';
-
-// const Modal = ({ job, closeModal }) => {
-//   return (
-//     <div className="bg-primary w-50 h-50 modal" onClick={closeModal}>
-//       <div className="d-row w-50 h-50 modal-content">
-//         <span className="close" onClick={(e) => e.stopPropagation()}>&times;</span>
-//         <h2>{job.title}</h2>
-//         <p>{job.description}</p>
-//         <button onClick={() => alert('Apply Now')}>Apply Now</button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Modal;

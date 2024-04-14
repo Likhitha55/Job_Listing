@@ -3,11 +3,6 @@ const router = express.Router();
 const jobController = require('../Controllers/jobController');
 const Job = require('../models/job');
 
-// Define routes for job listings
-// router.get('/jobs', jobController.getAllJobs);
-
-// Like this the logic will be there in controller
-// Route to get all jobs
 router.get('/jobs', async (req, res) => {
     try {
       const jobs = await Job.find();
@@ -19,7 +14,6 @@ router.get('/jobs', async (req, res) => {
   });
 
 router.post('/jobs', jobController.createJob);
-// Define other routes for CRUD operations
 router.post('/jobs/search', jobController.searchJobs);
 
 router.get('/jobs/total', jobController.getJobsCount);

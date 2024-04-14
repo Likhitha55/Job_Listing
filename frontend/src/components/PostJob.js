@@ -23,13 +23,10 @@ function PostJob() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Send a POST request to your backend API endpoint
+      // Sending a POST request to backend API endpoint
       const response = await axios.post("http://localhost:8080/api/jobs", formData);
-      // Handle the response if needed
       alert('New Job Posted Successfully')
       console.log("Job posted successfully:", response.data);
-      // Optionally, you can redirect the user to another page after posting the job
-      // history.push("/alljobs");
     } catch (error) {
       console.error('Error posting job:', error);
     }

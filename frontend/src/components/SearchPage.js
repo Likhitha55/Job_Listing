@@ -47,17 +47,6 @@ function SearchPage() {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-  
-//   try{
-//   console.log(searchQuery);
-//   console.log("Hitting api...");
-//   const response = axios.post('http://localhost:8080/api/jobs/search', { searchQuery });
-//   console.log("Came back from api");
-//   setFilteredJobs(response.data);
-//   console.log(filteredJobs);
-//   }catch (error) {
-//     console.error('Error searching jobs:', error);
-//   }
 
   const indexOfLastJob = currentPage * jobsPerPage;
   const indexOfFirstJob = indexOfLastJob - jobsPerPage;
@@ -145,15 +134,6 @@ function SearchPage() {
           </div>
 
         </div>
-
-
-
-      {/* <Pagination
-        jobsPerPage={jobsPerPage}
-        totalJobs={filteredJobs.length}
-        paginate={paginate}
-        currentPage={currentPage}
-      /> */}
     </div>
   );
 }

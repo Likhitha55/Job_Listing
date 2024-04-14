@@ -35,8 +35,6 @@
   height:60%;
 }
 #pics-on-banner img{
-  /* width:80px;
-  height:80px; */
   border-radius: 50%;
 }
 #pic1{
@@ -134,7 +132,6 @@
 }
 .close{
   cursor:pointer;
-  /* width:20px; */
   display:flex;
   justify-content: right;
   font-size:2rem;
@@ -150,7 +147,6 @@
 .logo{
   width:50px;
   height:50px;
-  /* background-color: aqua; */
 }
 .modal-box{
   overflow: scroll;

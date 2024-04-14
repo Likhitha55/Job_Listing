@@ -32,6 +32,7 @@ function Home(){
   const [jobsPerPage] = useState(6);
   const [selectedJob, setSelectedJob] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   // const [searchQuery, setSearchQuery] = useState('');
   const [filteredJobs, setFilteredJobs] = useState([]);
   const [noJobs, setNoJobs] = useState([]);
@@ -47,50 +48,15 @@ function Home(){
     if (e && e.target && e.target.value) {
       console.log(e.target.value);
       const searchQuery = e.target.value;
-      // setSearchQuery(e.target.value);
-    // setSearchQuery(event.target.value);
-    // Filter jobs based on search query
-    // const response = axios({
-    //   method:"get",
-    //   baseURL: "http://localhost:8080/api",
-    //   url: "jobs"
-    // })
-    // setJobs(response.data)
-    // console.log(jobs);
-    
       navigate("/searchpage",{state:{searchQuery}});
-      // const query = e.target.value;
-      // console.log(query);
-      // const response = await axios.post('http://localhost:8080/api/jobs/search', { query });
-    //   const response = await axios({
-    //   method:"get",
-    
-    //   baseURL: "http://localhost:8080/api/",
-    //   url: "jobs/search??query=${encodeURIComponent(query)}"
-    // });
-    // setFilteredJobs(response.data);
-    // }catch (error) {
-    //   console.error('Error searching jobs:', error);
-    // }
-    // const filtered = jobs.filter(job =>
-    //   job.role.toLowerCase().includes(e.target.value.toLowerCase()) ||
-    //   job.company.toLowerCase().includes(e.target.value.toLowerCase())
-    // );
-    
-    // console.log(filteredJobs);
   }
-  // else{
-  //   console.error('Invalid event or event target:', e);
-  //  }
    }
 
  // Fetch job data from backend
     useEffect(() => {
       async function fetchJobs() {
         try {
-          // const response = await axios.get('/api/jobs');
-          // setJobs(response.data);
-
+          
           const response = await axios({
             method:"get",
             baseURL: "http://localhost:8080/api",
@@ -105,14 +71,7 @@ function Home(){
 
     const handleButtonClick = (buttonValue) => {
       const searchQuery = buttonValue;
-      // setValue(buttonValue);
-      // Handle button click here
-      // console.log("Button clicked with value:", buttonValue);
-      // console.log("Data in value",searchQuery);
       navigate("/searchpage",{state:{searchQuery}});
-      // Example: Navigate to another page with the button value as a parameter
-      // history.push(`/other-page/${buttonValue}`);
-      
     };
 
   // Pagination
@@ -125,8 +84,6 @@ function Home(){
   const handleMoreDetails = (job) => setSelectedJob(job);
 
   // Close modal
-  
-
   const openModal = (job) => {
     setSelectedJob(job);
     setIsModalOpen(true);

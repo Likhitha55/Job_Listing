@@ -41,7 +41,6 @@
     align-items:center;
     padding:15px 30px 0px 20px;
     margin-bottom: 30px;
-    /* background-color: rgba(255, 228, 196, 0.555); */
 }
 .sidebar-header > span{
     display:none;
@@ -165,8 +164,4 @@
 .form > input:hover{
    border:none;
    font-size: large;
-}
-.form{
-    /* height:100%; */
-    /* overflow:scroll; */
 }

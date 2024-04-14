@@ -75,15 +75,14 @@ exports.getAllJobs = async (req, res) => {
 
   exports.searchJobs = async (req,res) => {
     console.log("Here");
-    // Implement API call to search jobs based on query
     const { query } = req.body;
     // console.log("Query in controller",query);
   try {
-    // Use Mongoose's find() method to search for jobs based on the query
+    
     const jobs = await Job.find({
       $or: [
-        { role: { $regex: query, $options: 'i' } }, // Case-insensitive regex match for role
-        { company: { $regex: query, $options: 'i' } } // Case-insensitive regex match for company
+        { role: { $regex: query, $options: 'i' } }, 
+        { company: { $regex: query, $options: 'i' } } 
       ]
     });
 
